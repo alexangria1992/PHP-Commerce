@@ -134,6 +134,41 @@
     </div>
 </div>
 
+<div id="advantages">
+  <div class="container">
+   <div class="same-height-row">
+     <div class="col-sm-4">
+       <div class="box same-height">
+        <div class="icon">
+            <i class="fa fa-heart"></i>
+        </div>
+        <h3><a href="">Best Offer</a></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+       <div class="box same-height">
+        <div class="icon">
+            <i class="fa fa-tag"></i>
+        </div>
+        <h3><a href="">Best Prices</a></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+       <div class="box same-height">
+        <div class="icon">
+            <i class="fa fa-thumbs-up"></i>
+        </div>
+        <h3><a href="">100% Original</a></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+      </div>
+   </div>
+  </div>
+</div>
+
+
     <script src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>
     
