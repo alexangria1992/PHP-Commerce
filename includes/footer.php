@@ -72,9 +72,9 @@
     </div>
 </div>
 
-<div class="copyright">
+<div id="copyright">
     <div class="container">
-        <div class="col-sm-6">
+        <div class="col-md-6">
             <p class="pull-left">&copy; 2020 M-Dev Store All Rights Reserved</p>
         </div>
         <div class="col-md-6">
