@@ -57,13 +57,13 @@
                     <li >
                         <a href="index.php">Home</a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="shop.php">Shop</a>
                     </li>
                     <li>
                         <a href="checkout.php">My Account</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="cart.php">Shopping Cart</a>
                     </li>
                     <li>
@@ -104,123 +104,86 @@
             <ul class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li>
-                    Shop
+                    Cart
                 </li>
             </ul>
         </div>
-        <div class="col-md-3">
-        <?php
+        <div id="cart" class="col-md-9">
+            <div class="box">
+                <form action="cart.php" method="post" enctype="multipart/form-data">
+                <h1>Shopping Cart</h1>
+                <p class="text-muted">You currently have 3 item(s) in your cart</p>
+                <div class="table-responsive">
+                      <table class="table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">Product</th>
+                                  <th>Quantity</th>
+                                  <th>Unit Price</th>
+                                  <th>Size</th>
+                                  <th colspan="1">Delete</th>
+                                  <th colspan="2">Sub-total</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><img class="img-responsive" src="admin_area/product_images/Product-3a.jpg" alt="Product 3a"></td>
+                                  <td><a href="">M-Dev Polo Shirt Men</a></td>
+                                  <td>2</td>
+                                  <td>$50</td>
+                                  <td>Large</td>
+                                  <td><input type="checkbox" name="remove[]"></td>
+                                  <td>$100</td>
+                              </tr>
+                          </tbody>
+                          <tbody>
+                              <tr>
+                                  <td><img class="img-responsive" src="admin_area/product_images/Product-1.jpg" alt="Product 3a"></td>
+                                  <td><a href="">M-Dev Woman T-Shirt</a></td>
+                                  <td>2</td>
+                                  <td>$50</td>
+                                  <td>Large</td>
+                                  <td><input type="checkbox" name="remove[]"></td>
+                                  <td>$100</td>
+                              </tr>
+                          </tbody>
+                          <tbody>
+                              <tr>
+                                  <td><img class="img-responsive" src="admin_area/product_images/Product-6a.jpg" alt="Product 3a"></td>
+                                  <td><a href="">M-Dev Woman Singlet</a></td>
+                                  <td>2</td>
+                                  <td>$50</td>
+                                  <td>Large</td>
+                                  <td><input type="checkbox" name="remove[]"></td>
+                                  <td>$100</td>
+                              </tr>
+                          </tbody>
+                          <tfoot>
+                              <tr>
+                                  <th colspan="5">Total</th>
+                                  <th colspan="2">$100</th>
+                              </tr>
+                            
+                          </tfoot>
+                      </table>
 
-include("includes/sidebar.php");
-
-?>
-
-        </div>
-
-        <div class="col-md-9">
-            <div id="productMain" class="row">
-                <div class="col-sm-6">
-                    <div id="mainImage">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1" ></li>
-                                <li data-target="#myCarousel" data-slide-to="2" ></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3a.jpg" alt="Product 3-a"></center>
-                                </div>
-                                <div class="item">
-                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3b.jpg" alt="Product 3-b" alt=""></center>
-                                </div>
-                                <div class="item">
-                                    <center><img class="img-responsive" src="admin_area/product_images/Product-3c.jpg" alt="Product 3-c" alt=""></center>
-                                </div>
-                            </div>
-                            <a href="#myCarousel" class="left carousel-control" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-
-                            </a>
-                            <a href="#myCarousel" class="right carousel-control" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Next</span>
-
-                            </a>
-                        </div>
+                </div>
+                <div class="box-footer">
+                    <div class="pull-left">
+                        <a href="index.php" class="btn btn-default">
+                            <i class="fa fa-chevron-left">Continue Shopping</i>
+                        </a>
+                    </div>
+                    <div class="pull-right">
+                        <button type="submit" name="update" value="Update Cart" class="btn btn-default">
+                            <i class="fa fa-refresh"></i> Update Cart
+                        </button>
+                        <a href="checkout.php" class="btn btn-primary">
+                            Proceed to Checkout <i class="fa fa-chevron-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="box">
-                        <h1 class="text-center">M-Dev Polo Shirt Men</h1>
-                        <form action="details.php" class="form-horizontal" method="post">
-                            <div class="form-group">
-                                <label for="" class="col-md-5 control-label">Products Quantity</label>
-                                <div class="col-md-7">
-                                    <select name="product_qty" id="" class="form-control">
-                                        <option >1</option>
-                                        <option >2</option>
-                                        <option >3</option>
-                                        <option >4</option>
-                                        <option >5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-5 control-label">
-                                    Product Size
-                                </label>
-                                <div class="col-md-7">
-                                    <select name="product_size" class="form-control">
-                                    <option >Select a Size</option>
-                                        <option >Small</option>
-                                        <option >Medium</option>
-                                        <option >Large</option>
-                                        
-                                    </select>
-                                </div>
-                            </div>
-                            <p class="price">$50</p>
-                            <p class="text-center">
-                                <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
-                            </p>
-                        </form>
-                    </div>
-                    <div class="row" id="thumbs">
-                        <div class="col-xs-4">
-                            <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
-                                <img src="admin_area/product_images/product-3a.jpg" alt="product 1" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="col-xs-4">
-                            <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
-                                <img src="admin_area/product_images/product-3b.jpg" alt="product 2" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="col-xs-4">
-                            <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
-                                <img src="admin_area/product_images/product-3c.jpg" alt="product 4" class="img-responsive">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="box" id="details">
-                <h4>Product Details</h4>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <h4>Size</h4>
-                <ul>
-                    <li>Small</li>
-                    <li>Medium</li>
-                    <li>Large</li>
-
-                </ul>
-               <hr>
-
+            </form>
             </div>
             <div id="row same-height-row">
                 <div class="col-md-3 col-sm-6">
@@ -263,9 +226,40 @@ include("includes/sidebar.php");
                 </div>
             </div>
         </div>
-       
-    </div>
-</div>
+        <div class="col-md-3">
+            <div id="order-summary" class="box">
+                <div class="box-header">
+                   <h3>Order Summary</h3>
+                </div>
+                <p class="text-muted">
+                    Shipping and additional costs are clacluated based on value you have entered
+                </p>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                            <td> Order Sub-Total</td>
+                            <th> $200 </th>
+                           </tr>
+                           <tr>
+                               <td> Shipping and Handling </td>
+                               <th> $200 </th>
+                           </tr>
+                           <tr>
+                               <td> Tax  </td>
+                               <th> $0 </th>
+                           </tr>
+                           <tr class="total">
+                               <td> Total  </td>
+                               <th> $200 </th>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
 <?php
 
 include("includes/footer.php");
