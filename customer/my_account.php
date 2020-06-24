@@ -38,7 +38,7 @@
 <div id="navbar" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a href="index.php" class="navbar-brand home">
+            <a href="../index.php" class="navbar-brand home">
                 <img src="images/1ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
                 <img src="images/1ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
             </a>
@@ -122,6 +122,26 @@ include("includes/sidebar.php");
                 <?php
                 if(isset($_GET['my_orders'])){ 
                     include("my_orders.php");
+                }
+                ?>
+               <?php
+                if(isset($_GET['pay_offline'])){ 
+                    include("pay_offline.php");
+                }
+                ?>
+                <?php
+                if(isset($_GET['edit_account'])){ 
+                    include('edit_account.php');
+                }
+                ?>
+                  <?php
+                if(isset($_GET['change_pass'])){ 
+                    include('change_pass.php');
+                }
+                ?>
+                   <?php
+                if(isset($_GET['delete_account'])){ 
+                    include('delete_account.php');
                 }
                 ?>
             </div>
