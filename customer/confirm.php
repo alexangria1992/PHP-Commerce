@@ -19,16 +19,16 @@
  <div class="col-md-6">
      <ul class="menu">
          <li>
-             <a href="customer_register.php">Register</a>
+             <a href="../customer_register.php">Register</a>
          </li>
          <li>
-             <a href="customer/my_account.php">My Account</a>
+             <a href="my_account.php">My Account</a>
          </li>
          <li>
-             <a href="cart.php">Go to Cart</a>
+             <a href="../cart.php">Go to Cart</a>
          </li>
          <li>
-             <a href="checkout.php">Login</a>
+             <a href="../checkout.php">Login</a>
          </li>
      </ul>
  </div>
@@ -55,19 +55,19 @@
             <div class="padding-nav">
                 <ul class="nav navbar-nav left">
                     <li >
-                        <a href="index.php">Home</a>
-                    </li>
-                    <li >
-                        <a href="shop.php">Shop</a>
+                        <a href="../index.php">Home</a>
                     </li>
                     <li>
-                        <a href="customer/my_account.php">My Account</a>
+                        <a href="../shop.php">Shop</a>
+                    </li>
+                    <li  class="active">
+                        <a href="my_account.php">My Account</a>
                     </li>
                     <li>
-                        <a href="cart.php">Shopping Cart</a>
+                        <a href="../cart.php">Shopping Cart</a>
                     </li>
-                    <li class="active">
-                        <a href="contact.php">Contact Us</a>
+                    <li>
+                        <a href="../contact.php">Contact Us</a>
                     </li>
                 
                 </ul>
@@ -104,56 +104,65 @@
             <ul class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li>
-                    Contact Us
+                    My Account
                 </li>
             </ul>
         </div>
         <div class="col-md-3">
-        
         <?php
 
 include("includes/sidebar.php");
 
 ?>
+
+
         </div>
         <div class="col-md-9">
             <div class="box">
-                <div class="box-header">
-                    <center>
-                        <h2> Feel free to Contact Us</h2>
-                        <p class="text-muted">
-                            If you have any questions, feel free to contact us. Our Customer Service work 24/7
-                        </p>
-                    </center>
-                    <form action="contact.php" method="post">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" class="form-control" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Subject</label>
-                            <input type="text" class="form-control" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea name="message" class="form-control"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" name="submit" class="btn btn-primary">
-                            <i class="fa fa-user-md">Send Message</i>
-                            </button>
-                        </div>
-                    </form>
+                <h1 align="center"> Please confirm your payment</h1>
+                <form action="confirm.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label> Amount Sent:</label>
+                    <input type="text" class="form-control" name="amount_sent" required>
                 </div>
+                <div class="form-group">
+                    <label> Select Payment Mode: </label>
+                  <select name="select_payment_mode" class="form-control">
+                      <option>Select Payment Mode</option>
+                      <option>Back Code</option>
+                      <option>UBL / Omni Paisa</option>
+                      <option>Easy Paisa</option>
+                      <option>Western Union</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label> Transaction / Reference ID: </label>
+                    <input type="text" class="form-control" name="ref_no" required>
+                </div>
+                <div class="form-group">
+                    <label> Omni Paisa / East Paisa: </label>
+                    <input type="text" class="form-control" name="code" required>
+                </div>
+                <div class="form-group">
+                    <label> Payment Date: </label>
+                    <input type="text" class="form-control" name="date" required>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fa fa-user-md">
+                            Confirm Payment
+                        </i>
+                    </button>
+                </div>
+            
+            </form>
             </div>
         </div>
-        </div>
-        </div>
+
       
+
+        </div>
+        </div>
 <?php
 
 include("includes/footer.php");

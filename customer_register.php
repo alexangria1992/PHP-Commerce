@@ -22,7 +22,7 @@
              <a href="customer_register.php">Register</a>
          </li>
          <li>
-             <a href="checkout.php">My Account</a>
+             <a href="customer/my_account.php">My Account</a>
          </li>
          <li>
              <a href="cart.php">Go to Cart</a>
@@ -61,7 +61,7 @@
                         <a href="shop.php">Shop</a>
                     </li>
                     <li>
-                        <a href="checkout.php">My Account</a>
+                        <a href="customer/my_account.php">My Account</a>
                     </li>
                     <li>
                         <a href="cart.php">Shopping Cart</a>
@@ -154,7 +154,7 @@ include("includes/sidebar.php");
                         </div>
                         <div class="form-group">
                             <label>Your Profile Picture</label>
-                            <input type="file" class="form-control" name="c_image" required>
+                            <input type="file" class="form-control form-height-custom" name="c_image" required>
                         </div>
                     
                     
